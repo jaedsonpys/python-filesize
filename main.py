@@ -7,7 +7,6 @@ def get_file_size(
     mb: bool = None,
     gb: bool = None
 ) -> float:
-    print(type(file))
     if not isinstance(file, BufferedReader):
         raise Exception('The file must be opened in binary mode')
 
