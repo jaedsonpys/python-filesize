@@ -25,3 +25,8 @@ def get_file_size(
         result = ((file_bytes / 1e+9), 'gb')
 
     return result
+
+
+if __name__ == '__main__':
+    file_size = get_file_size(open('test_files/image.jpg', 'rb'), kb=True)
+    print(f'The file has {file_size[0]}')
