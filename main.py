@@ -17,15 +17,15 @@ def get_file_size(
         raise Exception('You must choose a storage unit of measurement')
 
     if kb:
-        result = ((file_bytes / 1000), 'kb')
+        result = (file_bytes / 1000)
     elif mb:
-        result = ((file_bytes / 1e+6), 'mb')
+        result = (file_bytes / 1e+6)
     elif gb:
-        result = ((file_bytes / 1e+9), 'gb')
+        result = (file_bytes / 1e+9)
 
     return result
 
 
 if __name__ == '__main__':
     file_size = get_file_size(open('test_files/image.jpg', 'rb'), kb=True)
-    print(f'The file has {file_size[0]}')
+    print(f'The file has {file_size} KB')
